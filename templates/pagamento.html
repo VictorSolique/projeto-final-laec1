@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagamento - Web Flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <style>
+        .container {
+            display: flex;
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fffde7;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(255, 193, 7, 0.35);
+            overflow: hidden;
+        }
+        .cart-section {
+            background: #fff9c4;
+            padding: 32px 24px;
+            border-right: 2px solid #ffe082;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .cart-items { margin-bottom: 24px; }
+        .cart-item { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0; 
+            border-bottom: 1px solid #ffe082; 
+            color: #795548;
+        }
+        .payment-section {
+            padding: 40px;
+            background: #fffde7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form input, form select { 
+            width: 90%; 
+            padding: 10px;  
+            border: 1px solid #ffe082; 
+            border-radius: 4px; 
+            background: #fffde7;
+            color: #795548;
+        }
+        button { 
+            width: 100%; 
+            padding: 14px; 
+            margin-top: 20px;
+            background: #ffb300; 
+            color: #fff; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        button:hover { background: #ffa000; }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                margin-inline: 10px;
+            }
+            .cart-section, .payment-section {
+                border-right: none;
+                border-bottom: 2px solid #ffe082;
+                padding: 24px 12px;
+            }
+            .payment-section {
+                border-bottom: none;
+            }
+        }
+        @media (max-width: 500px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+            .cart-section, .payment-section {
+                padding: 16px 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="./index.html">Web Flex</a></h1>
+        <nav class="nav-pesquisa">
+            <div class="pesquisa">
+                <input type="text" placeholder="Buscar produtos...">
+                <span class="material-symbols-outlined">search</span>
+                <div class="login">
+                    <abbr title="Carrinho">
+                        <a href="carrinho.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+                    </abbr>
+                    <abbr title="Cadastrar / Fazer Login">
+                        <a href="cadastro.html"><span class="material-symbols-outlined">account_circle</span></a>
+                    </abbr>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="cart-section">
+            <h2 style="display: flex; align-items: center; justify-content: center;"><span class="material-symbols-outlined" style="font-size: 30px;">shopping_cart</span> Seu Carrinho</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <span>Mouse Gamer X7</span>
+                    <span>R$ 199,90</span>
+                </div>
+                <div class="cart-item">
+                    <span>Notebook Dell Inspiron</span>
+                    <span>R$ 3.200,00</span>
+                </div>
+                <div class="total">
+                    Total: R$ 3.399,90
+                </div>
+            </div>
+        </div>
+        <div class="payment-section">
+            <h2>Pagamento</h2>
+            <form method="post">
+                <p>Nome no cartão</p>
+                <input type="text" id="nome" placeholder="Digite o nome no seu cartão" required>
+
+                <p>Número do cartão</p>
+                <input type="text" id="numero_cartao" placeholder="0000 0000 0000 0000" maxlength="19" required>
+
+                <p>Validade</p>
+                <input type="text" id="validade" placeholder="MM/AA" maxlength="5" required>
+
+                <p>CVV</p>
+                <input type="text" id="cvv" placeholder="000" maxlength="4" required>
+
+                <button type="submit">Finalizar Pagamento</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Web Flex. Todos os direitos reservados.</p>
+        <nav>
+            <a href="sobre.html">Sobre Nós</a> |
+            <a href="contato.html">Contato</a>
+        </nav>
+    </footer>
+</body>
+</html>

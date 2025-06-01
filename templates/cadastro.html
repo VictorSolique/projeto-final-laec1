@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Web Flex</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <style>
+        body {
+            background-color: #ffe066;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            background: #fffde7;
+            border-radius: 16px;
+            padding: 30px;
+            margin-block: 30px;
+            min-width: 400px;
+        }
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ffe082;
+            border-radius: 8px;
+            background: #fffde7;
+        }
+        input:focus, textarea:focus, select:focus {
+            border: 1.5px solid #ffb300;
+            outline: none;
+        }
+        button {
+            padding: 10px;
+            background: #ffb300;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #ffc107;
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 10px;
+                min-width: 0;
+            }
+            .site-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="./index.html">Web Flex</a></h1>
+        <form>
+            <div>
+                <p>Nome do Produto:</p>
+                <input type="text" id="nome" required>
+            </div>
+            <div>
+                <p>Marca:</p>
+                <input type="text" id="marca" required>
+            </div>
+            <div>
+                <p>Preço:</p>
+                <input type="number" id="preco" min="0" step="0.01" required>
+            </div>
+            <div>
+                <p>Categoria:</p>
+                <select id="categoria" required>
+                    <option value="">Selecione</option>
+                    <option value="eletronicos">Eletrônicos</option>
+                    <option value="roupas">Roupas</option>
+                    <option value="alimentos">Alimentos</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+            <div>
+                <p>Descrição:</p>
+                <textarea id="descricao" rows="3" required></textarea>
+            </div>
+            <button type="submit">Cadastrar Produto</button>
+
+            <p>Ainda não tem sua conta? <a href="./login.html" style="text-decoration: underline;">Faça seu login</a> </p>
+        </form>
+    </div>
+</body>
+</html>

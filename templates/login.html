@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Web Flex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <style>
+        body {
+            background: #ffe066;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fffde7;
+            border: 2px solid #ffe082;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(255, 215, 64, 0.1);
+            padding: 32px 28px;
+            width: 320px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: #fbc02d;
+            margin-bottom: 24px;
+        }
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ffe082;
+            border-radius: 6px;
+            background: #fffde7;
+            font-size: 16px;
+            outline: none;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #ffd600;
+            color: #333;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: 0.2s;
+        }
+        .login-container button:hover {
+            background: #ffea00;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            <input type="text" name="username" placeholder="Usuário" required>
+            <input type="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p>Quer colocar seu produto no site? <br> <a href="./cadastro.html" style="text-decoration: underline;">Cadastre seu produto aqui</a> </p>
+        </form>
+    </div>
+</body>
+</html>
