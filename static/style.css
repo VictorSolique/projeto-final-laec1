@@ -89,7 +89,30 @@ abbr {
     text-decoration: none;
 }
 
+.aside-responsive {
+    display: none;
+}
+
 @media (max-width: 700px) {
+    aside {
+        display: none;
+    }
+    .aside-responsive {
+        display: block;
+    }
+    .categoria li {
+        display: inline;
+    }
+    .propaganda-aside {
+        flex-direction: column;
+    }
+    .propaganda-aside section {
+        display: flex;
+        justify-content: center;
+    }
+    .propaganda-aside section div {
+        margin: 10px;
+    }
     header {
         flex-direction: column;
     }
