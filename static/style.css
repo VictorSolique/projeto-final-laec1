@@ -265,18 +265,35 @@ aside h2 {
 /* SLIDE */
 
 
-
-
-footer {
-    background-color: #ecf001;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    bottom: 0;
+.footer {
+    background-color: #ffd900;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #fff;
 }
 
-footer a {
+.footer a {
     color: #007bff;
+}
+.footer a:hover {
+    color: #0056b3;
+}
+.footer-wave-svg {
+    background-color: transparent;
+    display: block;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+}
+.footer-wave-path {
+    fill: #fffff2;
+}
+
+.footer-content {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .produto-img {
@@ -294,8 +311,25 @@ footer a {
     margin-top: 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-
+.mini-slides-btn {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 5px 10px;
+    margin-top: 10px;    
+    border: 2px solid transparent;
+}
+.mini-slides-btn span {
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: 0.2s;
+    border: 2px solid transparent;
+}
+.mini-slides-btn span:hover {
+    cursor: pointer;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 15px;
+}
 .produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -333,5 +367,31 @@ footer a {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+
+/* PAGINAÇÃO DOS PRODUTOS */
+.paginacao ul {
+    margin-block: 50px;
+    text-align: center;    
+}
+.paginacao ul div {
+    display: inline;
+    padding: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+.paginacao ul li {
+    display: inline;
+    margin-inline: 10px;
+}
+.paginacao ul li button {
+    background: transparent;
+    padding: 10px;
+    border: none;
+}
+/* PAGINAÇÃO DOS PRODUTOS */
+
+
+
+
 
 

@@ -136,6 +136,38 @@
                         <p>R$ 749,00</p>
                         <a href="./produto.html">Ver Detalhes</a>
                     </div>
+                    <div class="produto">
+                        <img src="https://app.lojasnossolar.com.br/images/nossolar/produtos/9836/972752_190676_P1000.jpg"
+                            alt="Smartphone Samsung Galaxy A54">
+                        <h4>Smartphone Samsung Galaxy A54</h4>
+                        <p>R$ 2.499,00</p>
+                        <a href="./produto.html">Ver Detalhes</a>
+                    </div>
+                    <div class="produto">
+                        <img src="https://cdn.leroymerlin.com.br/products/ventilador_de_teto_com_controle_remoto_jeri_4_pas_freijo_220v_92177834_6804_600x600.jpg"
+                            alt="Ventilador de Teto Ventisol">
+                        <h4>Ventilador de Teto Ventisol Floripa</h4>
+                        <p>R$ 199,00</p>
+                        <a href="./produto.html">Ver Detalhes</a>
+                    </div>
+                    <div class="produto">
+                        <img src="https://a-static.mlcdn.com.br/800x560/poltrona-retratil-e-reclinavel-estoril-capuccino-luizzi/mobly/lu720up55djomob-730807/7f3192d41a468de08dfcfca285cd6d5d.jpeg"
+                            alt="Poltrona Reclinável Luiz">
+                        <h4>Poltrona Reclinável Luiz</h4>
+                        <p>R$ 899,00</p>
+                        <a href="./produto.html">Ver Detalhes</a>
+                    </div>
+                    <div class="produto">
+                        <img src="https://fastshopbr.vtexassets.com/arquivos/ids/223425/0_PANNST27LWRU_PRD_1500_1.jpg?v=638592455918400000"
+                            alt="Micro-ondas Panasonic 21L">
+                        <h4>Micro-ondas Panasonic 21L</h4>
+                        <p>R$ 599,00</p>
+                        <a href="./produto.html">Ver Detalhes</a>
+                    </div>
+                </div>
+                <div class="mini-slides-btn">
+                    <span class="material-symbols-outlined mini-next">arrow_left_alt</span>
+                    <span class="material-symbols-outlined mini-prev">arrow_right_alt</span>
                 </div>
             </section>
 
@@ -206,12 +238,19 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Web Flex. Todos os direitos reservados.</p>
+    <footer class="footer">
+      <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path class="footer-wave-path" d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z"></path>
+      </svg>
+      <div class="footer-content">
+        <p>&copy; 2023 Web Flex. Todos os direitos reservados.</p>
         <nav>
-            <a href="sobre.html">Sobre Nós</a> |
-            <a href="contato.html">Contato</a>
+            <a href="./index.html">Início</a> |
+            <a href="./produtos.html">Produtos</a> |
+            <a href="#">Sobre Nós</a> |
+            <a href="#">Contato</a>
         </nav>
+      </div>
     </footer>
 
     <script>
@@ -236,6 +275,32 @@
         nextBtn.onclick = nextSlide;
         showSlide(slideIndex);
         window.addEventListener('resize', () => showSlide(slideIndex));
+        
+
+        // Mini-slide (Produtos em Destaque)
+        let miniSlideIndex = 0;
+        const miniProdutos = document.querySelectorAll('.mini-slides .produto');
+        const miniSlidesToShow = 4; // Quantos produtos mostrar por vez
+        function showMiniSlides(n) {
+            miniProdutos.forEach((produto, i) => {
+            if (i >= n && i < n + miniSlidesToShow) {
+                produto.style.display = '';
+            } else {
+                produto.style.display = 'none';
+            }
+            });
+        }
+        function nextMiniSlide() {
+            miniSlideIndex = (miniSlideIndex + miniSlidesToShow) % miniProdutos.length;
+            showMiniSlides(miniSlideIndex);
+        }
+        function prevMiniSlide() {
+            miniSlideIndex = (miniSlideIndex - miniSlidesToShow + miniProdutos.length) % miniProdutos.length;
+            showMiniSlides(miniSlideIndex);
+        }
+        document.querySelector('.mini-prev').onclick = prevMiniSlide;
+        document.querySelector('.mini-next').onclick = nextMiniSlide;
+        showMiniSlides(miniSlideIndex);
     </script>
 </body>
 

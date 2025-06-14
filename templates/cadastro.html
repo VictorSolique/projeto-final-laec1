@@ -18,8 +18,8 @@
             background: #fffde7;
             border-radius: 16px;
             padding: 30px;
-            margin-block: 30px;
-            min-width: 400px;
+            margin-block: 5%;
+            min-width: 500px;
         }
         input, textarea, select {
             padding: 10px;
@@ -32,7 +32,7 @@
             outline: none;
         }
         button {
-            padding: 10px;
+            padding: 15px 25px;
             background: #ffb300;
             color: #fff;
             border: none;
@@ -56,8 +56,10 @@
 </head>
 <body>
     <div class="container">
-        <h1><a href="./index.html">Web Flex</a></h1>
+        <h4 style="margin-top: 0;"><a href="./index.html">Web Flex</a></h4>
         <form>
+            <h1 style="text-align: center;">Cadastre seu Produto</h1>
+            <hr>
             <div>
                 <p>Nome do Produto:</p>
                 <input type="text" id="nome" required>
@@ -84,9 +86,11 @@
                 <p>Descrição:</p>
                 <textarea id="descricao" rows="3" required></textarea>
             </div>
-            <button type="submit">Cadastrar Produto</button>
-
-            <p>Ainda não tem sua conta? <a href="./login.html" style="text-decoration: underline;">Faça seu login</a> </p>
+            <hr>
+            <div style="text-align: center; margin-top: 15px;">
+                <button type="submit">Cadastrar Produto</button>
+                <p>Ainda não tem sua conta? <a href="./login.html" style="text-decoration: underline;">Faça seu login</a> </p>
+            </div>
         </form>
     </div>
 </body>
